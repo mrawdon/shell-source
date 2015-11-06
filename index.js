@@ -33,7 +33,7 @@ module.exports = function(filename, opts, cb) {
   var status = null;
   var stdout = null;
   var stderr = null;
-  var proc = spawn(opts.wrapper, [ filename ]);
+  var proc = spawn('sh', [opts.wrapper, filename ]);
   
   proc.on('error', function(err) {
     cb(err);
